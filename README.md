@@ -1,25 +1,29 @@
 # Ember-proxy-controllers
 
-This README outlines the details of collaborating on this Ember addon.
+Ember.ObjectController and Ember.ArrayController extracted as an standalone addon.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Run `ember install ember-proxy-controllers` and you're good to go
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Import the classes from the addon and extend them as with the old `Ember.ArrayController`
+and `Ember.ObjectController`
 
-## Running Tests
+```js
+// app/controllers/posts.js
+import { ArrayController } from 'ember-proxy-controllers'
 
-* `ember test`
-* `ember test --server`
+export default ArrayController.extend({
+})
+```
 
-## Building
 
-* `ember build`
+```js
+// app/controllers/post.js
+import { ObjectController } from 'ember-proxy-controllers'
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+export default ObjectController.extend({
+})
+```
