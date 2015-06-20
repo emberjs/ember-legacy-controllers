@@ -1,7 +1,7 @@
 {
   "name": "ember-proxy-controllers",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember.ObjectController and Ember.ArrayController extracted as an standalone addon",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/cibernox/ember-proxy-controllers",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Miguel Camba",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.2",
@@ -36,7 +36,10 @@
     "ember-dev": "emberjs/ember-dev#a064f0cd2f4c225ffd023b63d4cb31a79db04aaf"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ObjectController",
+    "ArrayController",
+    "proxy"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"

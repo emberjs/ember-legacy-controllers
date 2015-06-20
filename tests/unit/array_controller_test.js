@@ -3,7 +3,6 @@ import { module, test } from 'qunit';
 import { ArrayController } from 'ember-proxy-controllers';
 import expectAssertion from 'ember-dev/test-helper/assertion';
 
-
 const { get, set } = Ember;
 
 module('ArrayController');
