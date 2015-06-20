@@ -4,18 +4,17 @@
 */
 
 import Ember from 'ember';
+import replace from './utils/replace';
 
 const {
   ArrayProxy,
   SortableMixin,
   ControllerMixin,
-  EnumerableUtils,
   Error: EmberError,
   Array: EmberArray,
   computed,
   get,
 } = Ember;
-const replace = EnumerableUtils.replace;
 
 /**
   `Ember.ArrayController` provides a way for you to publish a collection of
