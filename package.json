@@ -1,6 +1,6 @@
 {
   "name": "ember-proxy-controllers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ember.ObjectController and Ember.ArrayController extracted as an standalone addon",
   "directories": {
     "doc": "doc",
