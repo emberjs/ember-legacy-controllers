@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import ObjectController from 'ember-proxy-controllers/object';
+import ObjectController from 'ember-legacy-controllers/object';
 
 const { observer } = Ember;
 

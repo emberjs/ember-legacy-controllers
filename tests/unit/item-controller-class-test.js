@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import ArrayController from 'ember-proxy-controllers/array';
+import ArrayController from 'ember-legacy-controllers/array';
 
 const {
   guidFor,
@@ -244,7 +244,7 @@ test('`itemController` can be dynamic by overwriting `lookupItemController`', fu
 test('when `idx` is out of range, `lookupItemController` is not called', function(assert) {
   arrayController = ArrayController.create({
     container: container,
-    lookupItemController(object) {
+    lookupItemController() {
       assert.ok(false, '`lookupItemController` should not be called when `idx` is out of range');
     },
     model: lannisters
@@ -257,7 +257,7 @@ test('when `idx` is out of range, `lookupItemController` is not called', functio
 test('if `lookupItemController` returns a string, it must be resolvable by the container', function(assert) {
   arrayController = ArrayController.create({
     container: container,
-    lookupItemController(object) {
+    lookupItemController() {
       return 'NonExistent';
     },
     model: lannisters
@@ -303,7 +303,7 @@ test('array observers can invoke `objectAt` without overwriting existing item co
 
   arrayController.reopen({
     lannistersWillChange() { return this; },
-    lannistersDidChange(_, idx, removedAmt, addedAmt) {
+    lannistersDidChange(_, idx) {
       arrayObserverCalled = true;
       assert.equal(this.objectAt(idx).get('model.name'), 'Tyrion', 'Array observers get the right object via `objectAt`');
     }

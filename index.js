@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-proxy-controllers'
+  name: 'ember-legacy-controllers'
 };

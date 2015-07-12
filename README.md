@@ -13,7 +13,7 @@ and `Ember.ObjectController`
 
 ```js
 // app/controllers/posts.js
-import ArrayController from 'ember-proxy-controllers/array'
+import ArrayController from 'ember-legacy-controllers/array'
 
 export default ArrayController.extend({
   // ...
@@ -23,7 +23,7 @@ export default ArrayController.extend({
 
 ```js
 // app/controllers/post.js
-import ObjectController from 'ember-proxy-controllers/object'
+import ObjectController from 'ember-legacy-controllers/object'
 
 export default ObjectController.extend({
   // ...

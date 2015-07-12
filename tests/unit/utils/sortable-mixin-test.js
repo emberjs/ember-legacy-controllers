@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import SortableMixin from 'ember-proxy-controllers/utils/sortable-mixin';
+import SortableMixin from 'ember-legacy-controllers/utils/sortable-mixin';
 
 const {
   set,

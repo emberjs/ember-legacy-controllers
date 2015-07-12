@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
-import ArrayController from 'ember-proxy-controllers/array';
+import ArrayController from 'ember-legacy-controllers/array';
 import expectAssertion from 'ember-dev/test-helper/assertion';
 
 const { get, set } = Ember;
