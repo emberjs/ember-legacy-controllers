@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import beforeObserver from '../support/before-observer';
 
 const {
   get,
@@ -8,7 +9,6 @@ const {
   removeObserver,
   computed,
   Mixin,
-  beforeObserver,
   observer
 } = Ember;
 
@@ -159,7 +159,7 @@ export default Mixin.create(MutableEnumerable, {
     @property arrangedContent
     @private
   */
-  arrangedContent: computed('content', 'sortProperties.@each', {
+  arrangedContent: computed('content', 'sortProperties.[]', {
     get() {
       var content = get(this, 'content');
       var isSorted = get(this, 'isSorted');
