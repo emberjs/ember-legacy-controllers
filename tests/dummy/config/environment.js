@@ -7,6 +7,8 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {
+      _ENABLE_LEGACY_VIEW_SUPPORT: true,
+
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
