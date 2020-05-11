@@ -18,7 +18,7 @@ var lannisters, arrayController, controllerClass, otherControllerClass, registry
     tywin, jaime, cersei, tyrion;
 
 module('Ember.ArrayController - itemController', {
-  setup() {
+  beforeEach() {
     registry = new Registry();
     container = registry.container();
 
@@ -49,7 +49,7 @@ module('Ember.ArrayController - itemController', {
     registry.register('controller:Item', controllerClass);
     registry.register('controller:OtherItem', otherControllerClass);
   },
-  teardown() {
+  afterEach() {
     run(function() {
       container.destroy();
     });
@@ -334,7 +334,7 @@ test('`itemController`\'s life cycle should be entangled with its parent control
 });
 
 module('Ember.ArrayController - itemController with arrayComputed', {
-  setup() {
+  beforeEach() {
     registry = new Registry();
     container = registry.container();
 
@@ -357,7 +357,7 @@ module('Ember.ArrayController - itemController with arrayComputed', {
 
     registry.register('controller:Item', controllerClass);
   },
-  teardown() {
+  afterEach() {
     run(function() {
       container.destroy();
     });
