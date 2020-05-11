@@ -3,13 +3,12 @@
 module.exports = {
   name: require('./package').name,
 
-  init() {
-    this._super.init && this._super.init.apply(this, arguments);
-    this.hasLegacyViewSupport = this.project.config(process.env.EMBER_ENV).EmberENV._ENABLE_LEGACY_VIEW_SUPPORT;
-  },
-
   included() {
     this._super.included.apply(this, arguments);
+
+    let config = this.project.config(process.env.EMBER_ENV);
+
+    this.hasLegacyViewSupport = config.EmberENV._ENABLE_LEGACY_VIEW_SUPPORT;
 
     if (this.hasLegacyViewSupport) {
       // grab the original _findHost, before ember-engines can muck with it
