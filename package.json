@@ -1,13 +1,13 @@
 {
   "name": "ember-legacy-controllers",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "Ember.ObjectController and Ember.ArrayController extracted as an standalone addon",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/emberjs/ember-legacy-controllers",
   "license": "MIT",
-  "author": "",
+  "author": "Ember.js contributors",
   "directories": {
     "doc": "doc",
     "test": "tests"
