@@ -21,6 +21,14 @@ if (Ember.ENV._ENABLE_LEGACY_VIEW_SUPPORT) {
         let arrayController = this.get('_arrayController');
         arrayController.set('content', this.getAttrFor(attrs, 'content'));
       }
-    }
+    },
+
+    _arrangedContent: Ember.computed('attrs.content', function() {
+      if (this.getAttr('itemController')) {
+        return this.get('_arrayController');
+      }
+
+      return this.getAttr('content');
+    })
   });
 }
