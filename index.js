@@ -1,6 +1,5 @@
-/* jshint node: true */
 'use strict';
 
 module.exports = {
-  name: 'ember-legacy-controllers'
+  name: require('./package').name
 };
