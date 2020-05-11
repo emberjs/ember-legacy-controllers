@@ -1,35 +1,53 @@
-module.exports = {
-  scenarios: [
-    {
-      name: 'default',
-      dependencies: { }
-    },
-    {
-      name: 'ember-release',
-      dependencies: {
-        'ember': 'components/ember#release'
+'use strict';
+
+module.exports = async function() {
+  return {
+    useYarn: true,
+    scenarios: [
+      {
+        name: 'ember-1.13-without-ember-legacy-views',
+        bower: {
+          ember: '1.13.13'
+        },
+        npm: {
+          devDependencies: {
+            'ember-legacy-views': null
+          }
+        }
       },
-      resolutions: {
-        'ember': 'release'
-      }
-    },
-    {
-      name: 'ember-beta',
-      dependencies: {
-        'ember': 'components/ember#beta'
+      {
+        name: 'ember-1.13-with-ember-legacy-views',
+        bower: {
+          ember: '1.13.13'
+        },
+        npm: {
+          devDependencies: {
+            'ember-legacy-views': '0.2.0'
+          }
+        }
       },
-      resolutions: {
-        'ember': 'beta'
-      }
-    },
-    {
-      name: 'ember-canary',
-      dependencies: {
-        'ember': 'components/ember#canary'
+      {
+        name: 'ember-2.4-without-ember-legacy-views',
+        bower: {
+          ember: '2.4.6'
+        },
+        npm: {
+          devDependencies: {
+            'ember-legacy-views': null
+          }
+        }
       },
-      resolutions: {
-        'ember': 'canary'
+      {
+        name: 'ember-2.4-with-ember-legacy-views',
+        bower: {
+          ember: '2.4.6'
+        },
+        npm: {
+          devDependencies: {
+            'ember-legacy-views': '0.2.0'
+          }
+        }
       }
-    }
-  ]
+    ]
+  };
 };

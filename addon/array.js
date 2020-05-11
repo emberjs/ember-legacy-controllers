@@ -17,6 +17,17 @@ const {
 } = Ember;
 
 /**
+ * In >= 2.0.3, only container._registry is defined.
+ * In >= 2.1.0, only container.registry is defined. 
+ * 
+ * See https://github.com/emberjs/ember.js/pull/11440
+ * and https://github.com/emberjs/ember.js/pull/12117.
+ */
+function getRegistry(container) {
+  return container.registry || container._registry;
+}
+
+/**
   `Ember.ArrayController` provides a way for you to publish a collection of
   objects so that you can easily bind to the collection from a Handlebars
   `#each` helper, an `Ember.CollectionView`, or other controllers.
@@ -257,7 +268,8 @@ export default ArrayProxy.extend(ControllerMixin, SortableMixin, {
 
     fullName = 'controller:' + controllerClass;
 
-    if (!container._registry.has(fullName)) {
+    let registry = getRegistry(container);
+    if (!registry.has(fullName)) {
       throw new EmberError('Could not resolve itemController: "' + controllerClass + '"');
     }
 

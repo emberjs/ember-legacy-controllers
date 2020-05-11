@@ -16,7 +16,7 @@ var unsortedArray, sortedArrayProxy;
 module('Ember.Sortable');
 
 module('Ember.Sortable with content', {
-  setup() {
+  beforeEach() {
     run(function() {
       var array = [{ id: 1, name: 'Scumbag Dale' }, { id: 2, name: 'Scumbag Katz' }, { id: 3, name: 'Scumbag Bryn' }];
 
@@ -28,7 +28,7 @@ module('Ember.Sortable with content', {
     });
   },
 
-  teardown() {
+  afterEach() {
     run(function() {
       sortedArrayProxy.set('content', null);
       sortedArrayProxy.destroy();
@@ -157,7 +157,7 @@ test('changing sortProperties and sortAscending with setProperties, sortAscendin
 });
 
 module('Ember.Sortable with content and sortProperties', {
-  setup() {
+  beforeEach() {
     run(function() {
       var array = [{ id: 1, name: 'Scumbag Dale' }, { id: 2, name: 'Scumbag Katz' }, { id: 3, name: 'Scumbag Bryn' }];
 
@@ -169,7 +169,7 @@ module('Ember.Sortable with content and sortProperties', {
     });
   },
 
-  teardown() {
+  afterEach() {
     run(function() {
       sortedArrayProxy.destroy();
     });
@@ -282,7 +282,7 @@ test('sortProperties observers removed on content removal', function(assert) {
 });
 
 module('Ember.Sortable with sortProperties', {
-  setup() {
+  beforeEach() {
     run(function() {
       sortedArrayProxy = ArrayProxy.extend(SortableMixin, {
         sortProperties: ['name']
@@ -292,7 +292,7 @@ module('Ember.Sortable with sortProperties', {
     });
   },
 
-  teardown() {
+  afterEach() {
     run(function() {
       sortedArrayProxy.destroy();
     });
@@ -311,7 +311,7 @@ test('you can set content later and it will be sorted', function(assert) {
 });
 
 module('Ember.Sortable with sortFunction and sortProperties', {
-  setup() {
+  beforeEach() {
     run(function() {
       sortedArrayProxy = ArrayProxy.extend(SortableMixin, {
         sortProperties: ['name'],
@@ -335,7 +335,7 @@ module('Ember.Sortable with sortFunction and sortProperties', {
     });
   },
 
-  teardown() {
+  afterEach() {
     run(function() {
       sortedArrayProxy.destroy();
     });

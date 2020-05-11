@@ -1,7 +1,6 @@
 import Ember from 'ember';
 import { module, test } from 'qunit';
 import ArrayController from 'ember-legacy-controllers/array';
-import expectAssertion from 'ember-dev/test-helper/assertion';
 
 const { get, set } = Ember;
 
@@ -36,8 +35,7 @@ test('works properly when model is set to a plain array', function(assert) {
 
     assert.deepEqual(get(controller, 'model'), ['red', 'green'], 'can set model as a plain array');
   } else {
-    assert.expect(0);
-    expectAssertion(function() {
+    assert.throws(function() {
       set(controller, 'model', ['red', 'green']);
     }, /ArrayController expects `model` to implement the Ember.Array mixin. This can often be fixed by wrapping your model with `Ember\.A\(\)`./);
   }
