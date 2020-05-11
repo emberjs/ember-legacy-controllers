@@ -19,7 +19,7 @@ if (Ember.ENV._ENABLE_LEGACY_VIEW_SUPPORT) {
 
       if (itemController) {
         let arrayController = this.get('_arrayController');
-        set(arrayController, 'content', this.getAttrFor(attrs, 'content'));
+        arrayController.set('content', this.getAttrFor(attrs, 'content'));
       }
     }
   });
