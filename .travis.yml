@@ -46,8 +46,8 @@ jobs:
     # as well as latest stable release (bonus points to beta/canary)
     - env: EMBER_TRY_SCENARIO=ember-1.13-with-ember-legacy-views
     - env: EMBER_TRY_SCENARIO=ember-1.13-without-ember-legacy-views
-    - env: EMBER_TRY_SCENARIO=ember-2.5-with-ember-legacy-views
-    - env: EMBER_TRY_SCENARIO=ember-2.5-without-ember-legacy-views
+    - env: EMBER_TRY_SCENARIO=ember-2.4-with-ember-legacy-views
+    - env: EMBER_TRY_SCENARIO=ember-2.4-without-ember-legacy-views
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash

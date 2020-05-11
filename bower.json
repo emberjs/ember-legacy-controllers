@@ -1,6 +1,6 @@
 {
   "name": "ember-legacy-controllers",
   "dependencies": {
-    "ember": "2.5.1"
+    "ember": "2.4.6"
   }
 }

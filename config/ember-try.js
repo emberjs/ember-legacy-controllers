@@ -27,9 +27,9 @@ module.exports = async function() {
         }
       },
       {
-        name: 'ember-2.5-without-ember-legacy-views',
+        name: 'ember-2.4-without-ember-legacy-views',
         bower: {
-          ember: '2.5.1'
+          ember: '2.4.6'
         },
         npm: {
           devDependencies: {
@@ -38,9 +38,9 @@ module.exports = async function() {
         }
       },
       {
-        name: 'ember-2.5-with-ember-legacy-views',
+        name: 'ember-2.4-with-ember-legacy-views',
         bower: {
-          ember: '2.5.1'
+          ember: '2.4.6'
         },
         npm: {
           devDependencies: {
