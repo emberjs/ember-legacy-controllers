@@ -1,6 +1,6 @@
 {
   "name": "ember-legacy-controllers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Ember.ObjectController and Ember.ArrayController extracted as an standalone addon",
   "keywords": [
     "ember-addon"
