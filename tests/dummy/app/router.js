@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('generated-object-controller-test');
+  this.route('generated-array-controller-test');
 });
 
 export default Router;
