@@ -1,10 +1,23 @@
 'use strict';
 
+let VersionChecker = require('ember-cli-version-checker');
+
 module.exports = {
   name: require('./package').name,
 
+  init() {
+    this._super.init.apply(this, arguments);
+
+    let checker = new VersionChecker(this);
+    let emberVersion = checker.forEmber();
+
+    this.shouldInclude = emberVersion.gte('2.0.0-beta.1');
+  },
+
   included() {
     this._super.included.apply(this, arguments);
+
+    if (!this.shouldInclude) { return; }
 
     let config = this.project.config(process.env.EMBER_ENV);
 
@@ -22,7 +35,15 @@ module.exports = {
     }
   },
 
+  treeFor(name) {
+    if (!this.shouldInclude) { return; }
+
+    return this._super.treeFor.call(this, name);
+  },
+
   treeForVendor(rawVendorTree) {
+    if (!this.shouldInclude) { return; }
+
     if (this.hasLegacyViewSupport) {
       let babelAddon = this.addons.find(addon => addon.name === 'ember-cli-babel');
 
