@@ -1,3 +1,15 @@
+## v0.2.1 (2020-06-09)
+
+#### :rocket: Enhancement
+* [#15](https://github.com/emberjs/ember-legacy-controllers/pull/15) No-op addon in Ember 1 ([@mmun](https://github.com/mmun))
+
+#### :bug: Bug Fix
+* [#14](https://github.com/emberjs/ember-legacy-controllers/pull/14) Fix generated controllers to use proxying controllers ([@mmun](https://github.com/mmun))
+
+#### Committers: 1
+- Martin Muñoz ([@mmun](https://github.com/mmun))
+
+
 ## v0.2.0 (2020-05-12)
 
 #### :boom: Breaking Change
